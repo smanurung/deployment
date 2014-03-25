@@ -26,7 +26,7 @@ public class HelloWorld extends HttpServlet {
 		WebAppContext context = new WebAppContext();
         context.setDescriptor("web/WEB-INF/web.xml");
         context.setResourceBase("web");
-        context.setContextPath("/SecureWebProject");
+        context.setContextPath("/");
         context.setParentLoaderPriority(true);
  
         server.setHandler(context);
