@@ -39,7 +39,7 @@ public class ForgotPasswordServlet extends HttpServlet{
             try {
                 String sCurrentLine;
                 br = new BufferedReader(new FileReader(System.getProperty("user.dir") + 
-                    "/src/java/com/demo/credentials.conf"));
+                    "/src/main/java/com/demo/credentials.conf"));
                 int i = 0;
                 while ((sCurrentLine = br.readLine()) != null) {
                     credentials[i] = sCurrentLine;
