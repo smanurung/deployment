@@ -43,6 +43,7 @@
             </fieldset>
         </form>
         <a href="/upload-form.jsp">upload link</a>
+		<a href="/form.jsp">form-entry link</a>
     </body>
 </html>
 
