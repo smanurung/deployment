@@ -22,7 +22,7 @@ import javax.servlet.http.Part;
 @MultipartConfig(fileSizeThreshold=1024*1024*10,    // 10 MB
                  maxFileSize=1024*1024*50,          // 50 MB
                  maxRequestSize=1024*1024*100,      // 100 MB
-                 location="/home/sonny/Documents/KPI/Tugas I/IF4033-14/SecureWebProject/uploads")
+                 location="uploads")
 public class UploadServlet extends HttpServlet {    
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {        
         String filename = null;
