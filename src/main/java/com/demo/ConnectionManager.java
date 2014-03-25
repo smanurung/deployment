@@ -49,12 +49,21 @@ class ConnectionManager {
 		String password = dbUri.getUserInfo().split(":")[1];
 		
 		String dbUrl = "jdbc:mysql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
-		*/
 		
 		String username = "b8a6c9d88f5ea1";
 		String password = "09e826a2";
 		String dbUrl = "jdbc:mysql://us-cdbr-east-05.cleardb.net:3306/heroku_4929761f021afce";
+		return DriverManager.getConnection(dbUrl, username, password);
+		*/
+		
+		URI dbUri = new URI(System.getenv("CLEARDB_DATABASE_URL"));
+
+		String username = dbUri.getUserInfo().split(":")[0];
+		String password = dbUri.getUserInfo().split(":")[1];
+		String dbUrl = "jdbc:mysql://" + dbUri.getHost() + dbUri.getPath();
 
 		return DriverManager.getConnection(dbUrl, username, password);
+
+		
     }
 }
