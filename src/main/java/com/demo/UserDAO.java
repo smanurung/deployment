@@ -26,10 +26,7 @@ public class UserDAO {
         String username = bean.getUsername();
         String password = bean.getPassword();
         
-        String searchQuery = "SELECT * FROM User WHERE USERNAME=? AND PASSWORD=?";
-        
-//        String searchQuery
-//                = "select * from User where true";
+        String searchQuery = "SELECT * FROM user WHERE username=? AND password=?";
 
         // "System.out.println" prints in the console; Normally used to trace the process
         System.out.println("Your user name is " + username);
@@ -102,7 +99,7 @@ public class UserDAO {
         String obtainedPassword = null;
         PreparedStatement prepStmt = null;
 
-        String searchQuery = "SELECT PASSWORD FROM USER WHERE USERNAME=?";
+        String searchQuery = "SELECT password FROM user WHERE username=?";
 
         try {
             currentCon = ConnectionManager.getConnection();
@@ -113,7 +110,7 @@ public class UserDAO {
             boolean exist = rs.next();
 
             if (exist) {
-                obtainedPassword = rs.getString("Password");
+                obtainedPassword = rs.getString("password");
             } else {
                 obtainedPassword = null;
             }
