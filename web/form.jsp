@@ -13,7 +13,7 @@
     </head>
     <body>
         <h1>This is still alpha</h1>
-        <form action="/SecureWebProject/form" method="POST">
+        <form action="/form" method="POST">
             Enter a string!
             <input type="text" name="str">
             <input type="submit" value="submit">

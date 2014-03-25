@@ -13,7 +13,7 @@
     </head>
     <body>
         <h1>Upload</h1>
-        <form enctype="multipart/form-data" action="/SecureWebProject/upload" method="POST">
+        <form enctype="multipart/form-data" action="/upload" method="POST">
             <input name="file" type="file">
             <input type="submit" value="Upload">
         </form>    
