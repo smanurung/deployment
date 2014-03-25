@@ -34,7 +34,7 @@
             </fieldset>
         </form>
         Forgot Password Form
-        <form action="/SecureWebProject/forgot">
+        <form action="/forgot">
             <fieldset title="Forget Password">
                 <legend>Forget Password Form</legend>
                 Please enter your username      
@@ -42,7 +42,7 @@
                 <input type="submit" value="submit">
             </fieldset>
         </form>
-        <a href="/SecureWebProject/upload-form.jsp">upload link</a>
+        <a href="/upload-form.jsp">upload link</a>
     </body>
 </html>
 
