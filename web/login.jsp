@@ -23,7 +23,7 @@
 
     <body>
         Login Form
-        <form action="/SecureWebProject/login">
+        <form action="/login">
             <fieldset title="Login">
                 <legend>Login Form</legend>
                 Please enter your username      
