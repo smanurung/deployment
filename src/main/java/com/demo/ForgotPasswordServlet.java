@@ -17,6 +17,7 @@ import javax.mail.*;
 import javax.mail.internet.*;
 import javax.activation.*;
 import java.io.IOException;
+import java.io.FileNotFoundException;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -44,7 +45,13 @@ public class ForgotPasswordServlet extends HttpServlet{
                     credentials[i] = sCurrentLine;
                     i += 1;
                 }
-            } catch (IOException e) {
+            }
+			catch (FileNotFoundException e)
+			{
+				e.printStackTrace();
+			}
+			catch (IOException e)
+			{
                 e.printStackTrace();
             } finally {
                 try {
