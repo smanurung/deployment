@@ -1,3 +1,9 @@
+/*
+import org.eclipse.jetty.annotations.AnnotationConfiguration;
+import org.eclipse.jetty.plus.webapp.EnvConfiguration;
+import org.eclipse.jetty.plus.webapp.PlusConfiguration;
+*/
+
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
@@ -28,7 +34,15 @@ public class HelloWorld extends HttpServlet {
         context.setResourceBase("web");
         context.setContextPath("/");
         context.setParentLoaderPriority(true);
- 
+		
+		/*
+		context.setConfigurations(new Configuration[] {
+                new AnnotationConfiguration(), new WebXmlConfiguration(),
+                new WebInfConfiguration(), new TagLibConfiguration(),
+                new PlusConfiguration(), new MetaInfConfiguration(),
+                new FragmentConfiguration(), new EnvConfiguration() });
+		*/
+		
         server.setHandler(context);
 		
         server.start();
